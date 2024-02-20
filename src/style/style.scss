@@ -1,0 +1,73 @@
+$blue-pen: #4169e1;
+$red-pen: #dc143c;
+
+body {
+  height: 100vh;
+  background: url("/src/img/back.jpg");
+  font-family: "Caveat", cursive;
+}
+
+.square {
+  background: none;
+  border: none;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100px;
+  width: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  img {
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+  }
+}
+
+.square:focus {
+  outline: none;
+}
+
+.game {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__board {
+    background: url("/src/img/i.png");
+    background-size: cover;
+    &-row {
+      display: flex;
+      &:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 20px;
+    color: $red-pen;
+    font-size: 30px;
+  }
+}
+
+.button--refresh {
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "Caveat", cursive;
+  font-size: 40px;
+  color: $blue-pen;
+  &:hover {
+    text-decoration: underline;
+  }
+}
